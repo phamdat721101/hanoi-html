@@ -762,6 +762,12 @@
       margin-bottom: 2px
     }
 
+    .strike-number {
+      text-decoration: line-through;
+      text-decoration-color: #d53a1c;
+      text-decoration-thickness: 3.5px;
+    }
+
     .promo-price {
       font-size: clamp(1.65rem, 2.4vw, 2.85rem);
       font-weight: 1000;
@@ -1168,8 +1174,19 @@
         <div class="price-grid">
           <div class="price-card"><span class="pill" style="background:var(--white);">Hidden Hanoi Food & Alley
               Walk</span>
-            <div class="price-box"><span class="old-price">690,000 VND</span>
-              <div class="promo-price">599,000 <small>VND / person</small></div>
+            <div class="price-box">
+              <div style="margin-bottom:12px;padding-bottom:10px;border-bottom:1.5px dashed rgba(17,17,17,0.2);">
+                <div
+                  style="font-size:0.82rem;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:#2c2a26;margin-bottom:1px;">
+                  🚶 Regular Price</div>
+                <div class="promo-price"><span class="strike-number">650,000</span> <small>VND / person</small></div>
+              </div>
+              <div>
+                <div
+                  style="font-size:0.82rem;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:#d53a1c;margin-bottom:1px;">
+                  ⚡ Early Bird Promo</div>
+                <div class="promo-price">599,000 <small>VND / person</small></div>
+              </div>
             </div>
             <p><b>Summer Promo (Expires end of August)</b> • <b>Minimum departure:</b> 3 confirmed guests. Private
               options are available for solo travellers, couples and families.</p>
@@ -1179,7 +1196,7 @@
               <div class="check">Small group of no more than 6 guests</div>
               <div class="check">Route alternatives for weather or closed venues</div>
               <div class="check">Post-tour local recommendations</div>
-            </div><a class="btn btn-dark open-form-link" href="#" target="_blank" rel="noopener">Open booking form</a>
+            </div><a class="btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSclzSBUSEDmiGlD2nNPXRzAci2oVdoTZp9pC8tbLF4RcvZWPQ/viewform?usp=publish-editor" target="_blank" rel="noopener">Open booking form</a>
             <p class="small" style="margin-top:14px;color:#2c2a26">Dietary restrictions must be shared before
               confirmation. Severe allergies may require a private arrangement.</p>
           </div>
@@ -1189,13 +1206,13 @@
               <div style="margin-bottom:12px;padding-bottom:10px;border-bottom:1.5px dashed rgba(17,17,17,0.2);">
                 <div
                   style="font-size:0.82rem;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:#2c2a26;margin-bottom:1px;">
-                  🛵 Regular Price</div><span class="old-price" style="font-size:1.3rem;">1,250,000 VND</span>
-                <div class="promo-price">1,199,000 <small>VND / person</small></div>
+                  🛵 Regular Price</div>
+                <div class="promo-price"><span class="strike-number">1,199,000</span> <small>VND / person</small></div>
               </div>
               <div>
                 <div
                   style="font-size:0.82rem;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:#d53a1c;margin-bottom:1px;">
-                  ⚡ Early Rider Promo</div><span class="old-price" style="font-size:1.3rem;">1,099,000 VND</span>
+                  ⚡ Early Rider Promo</div>
                 <div class="promo-price">999,000 <small>VND / person</small></div>
               </div>
             </div>
@@ -1207,7 +1224,7 @@
               <div class="check">Rides behind driver (no driving experience required)</div>
               <div class="check"><b>Included:</b> Driver, bike, fuel, helmet, hotel pickup/drop-off</div>
               <div class="check">English-speaking lead host, water & 1 local drink</div>
-            </div><a class="btn btn-dark open-form-link" href="#" target="_blank" rel="noopener">Open booking form</a>
+            </div><a class="btn btn-dark" href="https://docs.google.com/forms/d/1D1hUfxSrdRLLQci-fb1UDt0CShSGQ2kIq3iF0wkQvD8/viewform?edit_requested=true" target="_blank" rel="noopener">Open booking form</a>
             <p class="small" style="margin-top:14px;color:#2c2a26">Each guest rides behind an experienced driver. No
               driving experience is required.</p>
           </div>
@@ -1218,13 +1235,13 @@
               <div style="margin-bottom:12px;padding-bottom:10px;border-bottom:1.5px dashed rgba(17,17,17,0.2);">
                 <div
                   style="font-size:0.82rem;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:#2c2a26;margin-bottom:1px;">
-                  🛵 Regular Price</div><span class="old-price" style="font-size:1.3rem;">1,490,000 VND</span>
-                <div class="promo-price">1,299,000 <small>VND / person</small></div>
+                  🛵 Regular Price</div>
+                <div class="promo-price"><span class="strike-number">1,299,000</span> <small>VND / person</small></div>
               </div>
               <div>
                 <div
                   style="font-size:0.82rem;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:#d53a1c;margin-bottom:1px;">
-                  ⚡ Early Rider Promo</div><span class="old-price" style="font-size:1.3rem;">1,299,000 VND</span>
+                  ⚡ Early Rider Promo</div>
                 <div class="promo-price">1,099,000 <small>VND / person</small></div>
               </div>
             </div>
@@ -1236,7 +1253,7 @@
               <div class="check">Deeper experience combining city stories, local life & authentic flavours</div>
               <div class="check"><b>Included:</b> Driver, bike, fuel, helmet, hotel pickup/drop-off</div>
               <div class="check">English-speaking lead host, 1 local meal, 1 drink & water</div>
-            </div><a class="btn btn-dark open-form-link" href="#" target="_blank" rel="noopener">Open booking form</a>
+            </div><a class="btn btn-dark" href="https://docs.google.com/forms/d/1Q8e0H4cEfrhLRMe6NtvUyXOZ89lhYkm21XACkvrJTGM/viewform?edit_requested=true" target="_blank" rel="noopener">Open booking form</a>
             <p class="small" style="margin-top:14px;color:#2c2a26">A deeper experience combining city stories, everyday
               local life and authentic Hanoi flavours.</p>
           </div>
