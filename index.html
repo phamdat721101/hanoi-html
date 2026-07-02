@@ -1041,6 +1041,323 @@
         display: flex
       }
     }
+
+    /* Countdown & Coming Soon Styles */
+    .coming-soon-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .card-badge-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .live-pulse-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(243, 123, 43, 0.15);
+      color: #a83208;
+      border: 1.5px solid var(--orange);
+      letter-spacing: 0.05em;
+    }
+    .teal-pulse {
+      background: rgba(22, 143, 136, 0.15);
+      color: #0b5954;
+      border-color: var(--teal);
+    }
+    .pulse-ring {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 0 rgba(243, 123, 43, 0.4);
+      animation: pulse-anim 1.8s infinite;
+    }
+    .teal-ring {
+      background: var(--teal);
+      animation: pulse-teal 1.8s infinite;
+    }
+    @keyframes pulse-anim {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(243, 123, 43, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(243, 123, 43, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(243, 123, 43, 0); }
+    }
+    @keyframes pulse-teal {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 143, 136, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(22, 143, 136, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 143, 136, 0); }
+    }
+    .coming-soon-box {
+      background: rgba(255, 255, 255, 0.85);
+      border: 2.5px solid var(--ink);
+      border-radius: 24px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: 6px 6px 0 rgba(17,17,17,0.15);
+      margin-bottom: 20px;
+    }
+    .icon-header {
+      font-size: 2.6rem;
+      margin-bottom: 8px;
+    }
+    .coming-title {
+      font-size: 1.65rem;
+      font-weight: 1000;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+    .coming-desc {
+      font-size: 0.95rem;
+      color: #3e3b35;
+      margin: 0 0 18px;
+      line-height: 1.5;
+    }
+    .countdown-widget {
+      background: var(--ink);
+      border-radius: 18px;
+      padding: 16px 12px;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(17,17,17,0.25);
+    }
+    .countdown-top {
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .timer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .timer-unit {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      padding: 8px 6px;
+      min-width: 52px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .timer-val {
+      font-size: 1.45rem;
+      font-weight: 1000;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      color: #fff;
+    }
+    .timer-label {
+      font-size: 0.62rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.65);
+      margin-top: 4px;
+    }
+    .timer-sep {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--yellow);
+      animation: blink-sep 1s infinite;
+    }
+    @keyframes blink-sep {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .coming-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1.5px dashed rgba(17,17,17,0.18);
+      flex-wrap: wrap;
+    }
+    .coming-status {
+      font-size: 0.9rem;
+      font-weight: 850;
+      color: #3e3b35;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-notify {
+      padding: 0 16px;
+      min-height: 44px;
+      font-size: 0.88rem;
+      background: var(--white);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      border-radius: 12px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 var(--ink);
+      transition: all 0.2s ease;
+    }
+    .btn-notify:hover {
+      background: var(--yellow);
+      transform: translateY(-2px);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    /* Footer Social & Contact Styles */
+    footer {
+      padding: 64px 0 40px !important;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr 1.6fr !important;
+      gap: 48px !important;
+      align-items: start !important;
+    }
+    .footer-col-head {
+      font-size: 0.85rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--yellow);
+      margin: 0 0 20px;
+    }
+    .social-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 960px) {
+      .social-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 580px) {
+      .social-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .social-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #fff;
+      transition: all 0.25s ease;
+    }
+    .social-card:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: var(--yellow);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+    }
+    .sc-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: #fff;
+    }
+    .sc-text {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .sc-text small {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 850;
+    }
+    .sc-text strong {
+      font-size: 0.92rem;
+      color: #fff;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .insta-gradient {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+    .threads-bg {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .tiktok-bg {
+      background: #000;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #25F4EE;
+    }
+    .fb-bg {
+      background: #1877F2;
+    }
+    .wa-bg {
+      background: #25D366;
+    }
+    .email-bg {
+      background: var(--purple);
+    }
+    .footer-bottom {
+      margin-top: 52px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .back-top {
+      color: var(--yellow);
+      font-weight: 800;
+      transition: opacity 0.2s;
+    }
+    .back-top:hover {
+      opacity: 0.8;
+    }
+    @media (max-width: 960px) {
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
+      }
+      .social-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .social-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .timer-unit {
+        min-width: 44px;
+        padding: 6px 4px;
+      }
+      .timer-val {
+        font-size: 1.25rem;
+      }
+    }
   </style>
 </head>
 
@@ -1200,27 +1517,100 @@
             <p class="small" style="margin-top:14px;color:#2c2a26">Dietary restrictions must be shared before
               confirmation. Severe allergies may require a private arrangement.</p>
           </div>
-          <div class="price-card"><span class="pill"
-              style="background:var(--orange);color:#fff;border-color:var(--ink);">Hanoi by Motor — City Ride</span>
-            <div style="margin: 36px 0; padding: 36px 24px; background: rgba(255, 255, 255, 0.7); border: 3px dashed var(--ink); border-radius: 24px; text-align: center; box-shadow: 6px 6px 0 rgba(17,17,17,0.15);">
-              <div style="font-size: 2.8rem; margin-bottom: 14px;">🛵</div>
-              <div style="font-size: 2rem; font-weight: 1000; letter-spacing: -0.05em; color: var(--ink); text-transform: uppercase; margin-bottom: 12px;">Coming Soon</div>
-              <p style="font-size: 1.05rem; font-weight: 700; color: #2c2a26; margin: 0; line-height: 1.5;">See more of Hanoi in less time—from Old & French Quarters to Long Bien Bridge & West Lake.</p>
+          <div class="price-card coming-soon-card" style="background: #fff8eb; border: 3px solid var(--ink);">
+            <div>
+              <div class="card-badge-row">
+                <span class="pill" style="background:var(--orange);color:#fff;border-color:var(--ink);">Hanoi by Motor — City Ride</span>
+                <span class="live-pulse-badge"><span class="pulse-ring"></span> 10 Days Left</span>
+              </div>
+              
+              <div class="coming-soon-box">
+                <div class="icon-header">🛵</div>
+                <h3 class="coming-title">Hanoi by Motor</h3>
+                <p class="coming-desc">See more of Hanoi in less time—from Old & French Quarters to Long Bien Bridge & West Lake.</p>
+                
+                <div class="countdown-widget" data-countdown-days="10">
+                  <div class="countdown-top">
+                    <span>⚡ LAUNCHING IN 10 DAYS</span>
+                  </div>
+                  <div class="timer-grid">
+                    <div class="timer-unit">
+                      <span class="timer-val js-days">10</span>
+                      <span class="timer-label">DAYS</span>
+                    </div>
+                    <span class="timer-sep">:</span>
+                    <div class="timer-unit">
+                      <span class="timer-val js-hours">14</span>
+                      <span class="timer-label">HRS</span>
+                    </div>
+                    <span class="timer-sep">:</span>
+                    <div class="timer-unit">
+                      <span class="timer-val js-mins">35</span>
+                      <span class="timer-label">MIN</span>
+                    </div>
+                    <span class="timer-sep">:</span>
+                    <div class="timer-unit">
+                      <span class="timer-val js-secs">00</span>
+                      <span class="timer-label">SEC</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.95rem; font-weight: 850; color: #2c2a26; padding: 14px 20px; background: rgba(255,255,255,0.9); border-radius: 999px; border: 2.5px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);">
-              <span>✨</span> Launching Soon
+
+            <div class="coming-footer">
+              <div class="coming-status">
+                <span>🔔</span> Pre-booking opens soon
+              </div>
+              <a href="#booking" class="btn btn-notify" onclick="alert('Thank you! We will notify you when Hanoi by Motor launches in 10 days.'); return false;">Notify Me →</a>
             </div>
           </div>
-          <div class="price-card"><span class="pill"
-              style="background:var(--teal);color:#fff;border-color:var(--ink);">Hanoi Unfiltered — Backstreets, Local
-              Life & Food</span>
-            <div style="margin: 36px 0; padding: 36px 24px; background: rgba(255, 255, 255, 0.7); border: 3px dashed var(--ink); border-radius: 24px; text-align: center; box-shadow: 6px 6px 0 rgba(17,17,17,0.15);">
-              <div style="font-size: 2.8rem; margin-bottom: 14px;">🍜</div>
-              <div style="font-size: 2rem; font-weight: 1000; letter-spacing: -0.05em; color: var(--ink); text-transform: uppercase; margin-bottom: 12px;">Coming Soon</div>
-              <p style="font-size: 1.05rem; font-weight: 700; color: #2c2a26; margin: 0; line-height: 1.5;">Go beyond famous landmarks to discover backstreets, riverside communities, local markets & hidden food.</p>
+          <div class="price-card coming-soon-card" style="background: #effaf9; border: 3px solid var(--ink);">
+            <div>
+              <div class="card-badge-row">
+                <span class="pill" style="background:var(--teal);color:#fff;border-color:var(--ink);">Hanoi Unfiltered — Backstreets</span>
+                <span class="live-pulse-badge teal-pulse"><span class="pulse-ring teal-ring"></span> 20 Days Left</span>
+              </div>
+              
+              <div class="coming-soon-box">
+                <div class="icon-header">🍜</div>
+                <h3 class="coming-title">Hanoi Unfiltered</h3>
+                <p class="coming-desc">Go beyond famous landmarks to discover backstreets, riverside communities, local markets & hidden food.</p>
+                
+                <div class="countdown-widget" data-countdown-days="20">
+                  <div class="countdown-top">
+                    <span>⚡ LAUNCHING IN 20 DAYS</span>
+                  </div>
+                  <div class="timer-grid">
+                    <div class="timer-unit">
+                      <span class="timer-val js-days">20</span>
+                      <span class="timer-label">DAYS</span>
+                    </div>
+                    <span class="timer-sep">:</span>
+                    <div class="timer-unit">
+                      <span class="timer-val js-hours">14</span>
+                      <span class="timer-label">HRS</span>
+                    </div>
+                    <span class="timer-sep">:</span>
+                    <div class="timer-unit">
+                      <span class="timer-val js-mins">35</span>
+                      <span class="timer-label">MIN</span>
+                    </div>
+                    <span class="timer-sep">:</span>
+                    <div class="timer-unit">
+                      <span class="timer-val js-secs">00</span>
+                      <span class="timer-label">SEC</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.95rem; font-weight: 850; color: #2c2a26; padding: 14px 20px; background: rgba(255,255,255,0.9); border-radius: 999px; border: 2.5px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);">
-              <span>✨</span> Currently in preparation
+
+            <div class="coming-footer">
+              <div class="coming-status">
+                <span>🔔</span> Currently in preparation
+              </div>
+              <a href="#booking" class="btn btn-notify" onclick="alert('Thank you! We will notify you when Hanoi Unfiltered launches in 20 days.'); return false;">Notify Me →</a>
             </div>
           </div>
         </div>
@@ -1340,26 +1730,74 @@
     <div class="wrap footer-grid">
       <div>
         <div class="brand"><span class="brand-mark"></span><span>365 Days Hidden Gems</span></div>
-        <p class="small" style="color:rgba(255,255,255,.58);margin-top:12px">Hanoi food, alleys and local stories—one
-          small group at a time.</p>
+        <p class="small" style="color:rgba(255,255,255,.68);margin:16px 0 22px;max-width:360px;line-height:1.65">
+          Hanoi food, alleys and local stories—one small group at a time. Taste authentic flavors beyond the postcard.
+        </p>
       </div>
-      <div class="footer-links"><a id="whatsapp-link" href="#" target="_blank" rel="noopener">WhatsApp</a><a
-          id="instagram-link" href="#" target="_blank" rel="noopener">Instagram</a><a href="#booking">Book now</a></div>
+
+      <div>
+        <h4 class="footer-col-head">Connect on Social Channels</h4>
+        <div class="social-cards-grid">
+          <a class="social-card" href="https://www.instagram.com/365days.vietnam?igsh=MW9xdjBhbWQ2d3A0ZA==" target="_blank" rel="noopener">
+            <span class="sc-icon insta-gradient">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </span>
+            <div class="sc-text"><small>Instagram</small><strong>@365days.vietnam</strong></div>
+          </a>
+          
+          <a class="social-card" href="https://www.threads.com/@365days.vietnam?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener">
+            <span class="sc-icon threads-bg">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.535 11.758a5.27 5.27 0 0 0-.276-1.554c-.381-1.226-1.178-2.146-2.251-2.593-1.037-.432-2.22-.455-3.376-.067-1.168.391-2.15 1.189-2.766 2.247-.638 1.096-.864 2.378-.635 3.614.238 1.282.97 2.385 2.062 3.107 1.087.718 2.38.966 3.642.701 1.025-.215 1.933-.787 2.558-1.611l-1.57-1.196c-.443.584-1.086.989-1.81 1.141-.895.188-1.81-.004-2.58-.513-.772-.51-1.29-1.29-1.458-2.196-.164-.876 0-1.785.451-2.56.438-.75 1.134-1.316 1.96-1.593.819-.275 1.657-.258 2.392.048.76.317 1.325.969 1.594 1.838.118.382.164.792.142 1.2h-.002c-.062 1.183-.604 2.152-1.528 2.73-.807.505-1.785.666-2.695.445-.88-.214-1.529-.861-1.745-1.741-.118-.48-.066-1.001.154-1.465.234-.493.684-.863 1.228-.999l.412 1.957c-.244.062-.395.203-.453.326-.064.137-.087.319-.047.48.093.376.368.65.738.74.383.093.792.025 1.13-.187.575-.359.907-.96 0-2.348z"/><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/></svg>
+            </span>
+            <div class="sc-text"><small>Threads</small><strong>@365days.vietnam</strong></div>
+          </a>
+
+          <a class="social-card" href="https://www.tiktok.com/@365days.vietnam?_r=1&_t=ZS-97fUqiKsoY0" target="_blank" rel="noopener">
+            <span class="sc-icon tiktok-bg">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
+            </span>
+            <div class="sc-text"><small>TikTok</small><strong>@365days.vietnam</strong></div>
+          </a>
+
+          <a class="social-card" href="https://www.facebook.com/share/1BUKpP1oS5/?mibextid=wwXIfr" target="_blank" rel="noopener">
+            <span class="sc-icon fb-bg">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </span>
+            <div class="sc-text"><small>Facebook</small><strong>365 Days Hidden Gems</strong></div>
+          </a>
+
+          <a class="social-card" href="https://wa.me/84788246321" target="_blank" rel="noopener">
+            <span class="sc-icon wa-bg">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.28.072.386-.058c.106-.13.456-.531.578-.713.122-.182.245-.152.411-.09.166.063 1.054.497 1.235.587.181.09.301.135.346.21.045.075.045.434-.099.839z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.95l4.936-1.35C8.423 21.503 10.16 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.25c-1.637 0-3.163-.483-4.468-1.328l-.32-.207-2.928.801.787-2.836-.216-.339C3.992 14.992 3.5 13.547 3.5 12 3.5 7.313 7.313 3.5 12 3.5S20.5 7.313 20.5 12 16.687 20.25 12 20.25z"/></svg>
+            </span>
+            <div class="sc-text"><small>WhatsApp</small><strong>+84 78 824 6321</strong></div>
+          </a>
+
+          <a class="social-card" href="mailto:365days.vietnam@gmail.com">
+            <span class="sc-icon email-bg">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            <div class="sc-text"><small>Email</small><strong>365days.vietnam@gmail.com</strong></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 365 Days Hidden Gems Vietnam. All rights reserved.</span>
+      <a href="#top" class="back-top">Back to top ↑</a>
     </div>
   </footer>
   <script>
     const CONFIG = {
-      formEmbedUrl: "PASTE_GOOGLE_FORM_EMBED_URL_HERE",
-      formOpenUrl: "PASTE_GOOGLE_FORM_PUBLIC_LINK_HERE",
-      whatsappUrl: "https://wa.me/84XXXXXXXXX",
-      instagramUrl: "https://instagram.com/YOUR_HANDLE"
+      formEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSclzSBUSEDmiGlD2nNPXRzAci2oVdoTZp9pC8tbLF4RcvZWPQ/viewform?usp=publish-editor",
+      formOpenUrl: "https://docs.google.com/forms/d/e/1FAIpQLSclzSBUSEDmiGlD2nNPXRzAci2oVdoTZp9pC8tbLF4RcvZWPQ/viewform?usp=publish-editor",
+      whatsappUrl: "https://wa.me/84788246321",
+      instagramUrl: "https://www.instagram.com/365days.vietnam?igsh=MW9xdjBhbWQ2d3A0ZA==",
+      threadsUrl: "https://www.threads.com/@365days.vietnam?igshid=NTc4MTIwNjQ2YQ==",
+      tiktokUrl: "https://www.tiktok.com/@365days.vietnam?_r=1&_t=ZS-97fUqiKsoY0",
+      facebookUrl: "https://www.facebook.com/share/1BUKpP1oS5/?mibextid=wwXIfr",
+      emailUrl: "mailto:365days.vietnam@gmail.com"
     };
-    const whatsapp = document.getElementById("whatsapp-link"), instagram = document.getElementById("instagram-link");
-    const hasEmbed = CONFIG.formEmbedUrl.startsWith("http"), hasOpen = CONFIG.formOpenUrl.startsWith("http");
-    const publicLink = hasOpen ? CONFIG.formOpenUrl : (hasEmbed ? CONFIG.formEmbedUrl : "#");
-    document.querySelectorAll(".open-form-link").forEach(btn => btn.href = publicLink);
-    if (whatsapp) whatsapp.href = CONFIG.whatsappUrl;
-    if (instagram) instagram.href = CONFIG.instagramUrl;
     document.querySelectorAll('a[href^="#"]').forEach(link => { link.addEventListener("click", event => { const target = document.querySelector(link.getAttribute("href")); if (!target) return; event.preventDefault(); target.scrollIntoView({ behavior: "smooth", block: "start" }) }) });
     const track = document.getElementById("reviewsTrack"), prevBtn = document.querySelector(".prev-btn"), nextBtn = document.querySelector(".next-btn");
     if (track && prevBtn && nextBtn) {
@@ -1372,6 +1810,56 @@
       }, 4500);
       track.addEventListener("mouseenter", () => clearInterval(autoSlide));
     }
+
+    // Dynamic Live Countdown Timers for Coming Soon packages
+    function initCountdowns() {
+      const widgets = document.querySelectorAll('.countdown-widget');
+      widgets.forEach(widget => {
+        const totalDays = parseInt(widget.getAttribute('data-countdown-days'), 10) || 10;
+        const storageKey = 'hanoi_365_launch_timer_' + totalDays;
+        let targetTime = localStorage.getItem(storageKey);
+        
+        if (!targetTime || isNaN(targetTime) || parseInt(targetTime, 10) <= Date.now()) {
+          // Initialize target time so days explicitly equal `totalDays` and hours/mins tick live
+          targetTime = Date.now() + (totalDays * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (35 * 60 * 1000);
+          localStorage.setItem(storageKey, targetTime);
+        } else {
+          targetTime = parseInt(targetTime, 10);
+        }
+
+        const daysEl = widget.querySelector('.js-days');
+        const hoursEl = widget.querySelector('.js-hours');
+        const minsEl = widget.querySelector('.js-mins');
+        const secsEl = widget.querySelector('.js-secs');
+
+        function updateTimer() {
+          const now = Date.now();
+          const diff = targetTime - now;
+
+          if (diff <= 0) {
+            if (daysEl) daysEl.textContent = '00';
+            if (hoursEl) hoursEl.textContent = '00';
+            if (minsEl) minsEl.textContent = '00';
+            if (secsEl) secsEl.textContent = '00';
+            return;
+          }
+
+          const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+          if (daysEl) daysEl.textContent = String(d).padStart(2, '0');
+          if (hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
+          if (minsEl) minsEl.textContent = String(m).padStart(2, '0');
+          if (secsEl) secsEl.textContent = String(s).padStart(2, '0');
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+      });
+    }
+    initCountdowns();
   </script>
 </body>
 
